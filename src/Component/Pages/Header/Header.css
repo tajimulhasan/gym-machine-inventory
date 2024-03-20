@@ -33,10 +33,11 @@ margin-right: 110px;
     list-style: none;
     margin: 0px 20px;
 }
-.elements ul li a{
+.elements ul li {
     position: relative;
+    text-decoration: none;
 }
-.elements ul li a::before{
+.elements ul li ::before{
    position: absolute;
    content: '';
    left: 0;
@@ -51,8 +52,8 @@ margin-right: 110px;
    -ms-transform: scaleX(0);
    -o-transform: scaleX(0);
 }
-.elements ul li a:hover::before,
-.elements ul li a:active::before{
+.elements ul li :hover::before,
+.elements ul li :active::before{
     transform-origin: left;
     transform: scaleX(1);
     -webkit-transform: scaleX(1);

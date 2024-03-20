@@ -1,11 +1,13 @@
 .carouselCaption h3{
     font-size: 55px;
     color: white;
+    margin-bottom: 30px;
     animation: textIn .5s ease;
     -webkit-animation: textIn 1s ease;
 }
 @keyframes textIn{
     0%{
+        opacity: 0%;
         transform: translateY(100%);
         -webkit-transform: translateY(100%);
         -moz-transform: translateY(100%);
@@ -13,6 +15,7 @@
         -o-transform: translateY(100%);
 }
     100%{
+        opacity: 100%;
         transform: translateY(0%);
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
