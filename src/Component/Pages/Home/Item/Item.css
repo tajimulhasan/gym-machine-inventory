@@ -1,6 +1,6 @@
 .item{
     width: 320px;
-    height: 480px;
+    height: 490px;
     padding: 12px;
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -28,7 +28,7 @@
 }
 .up-btn{
  position: absolute;
- top: 91%;
+ top: 90%;
  width: 100%;
  display: flex;
  justify-content: center;

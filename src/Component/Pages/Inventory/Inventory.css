@@ -1,4 +1,7 @@
-
+.inv{
+    width: max-content;
+    margin: 0px auto;
+}
 .single-item{
     width: 900px;
     display: flex;

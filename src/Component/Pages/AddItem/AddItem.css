@@ -1,0 +1,30 @@
+.add-item-form{
+      width: 30%;
+      margin: 30px auto;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 13px;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      -o-border-radius: 7px;
+}
+.add-item-form form{
+    width: 100%;
+}
+.price-and-quantity{
+    display: flex;
+    justify-content: space-between;
+}
+.pq{ 
+    width: 180px;
+}
+.form-submit{
+    width: 100%;
+    background-color: #FF9C1A;
+    border: none;
+}
+.form-submit:hover{
+    background-color: #FF9C1A;
+    color: black;
+}

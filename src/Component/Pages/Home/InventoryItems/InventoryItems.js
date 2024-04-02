@@ -19,6 +19,7 @@ const InventoryItems = () => {
                     items.map(i => <Item key={i._id} id={i._id} items={i}></Item>)
                 }
             </div>
+            
         </div>
         </div>
     );
