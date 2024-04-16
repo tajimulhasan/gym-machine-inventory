@@ -1,0 +1,56 @@
+.sign-form{
+    width: 24%;
+    margin: 0px auto;
+    padding: 0.8rem 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.space-line{
+    width: 324px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lin{
+    width: 120px;
+    height: 1px;
+    background-color: rgb(201, 201, 201);
+}
+.space-line p{
+    margin: 0;
+    color: rgb(129, 129, 129);
+}
+
+.google-login{
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 270px;
+ margin: 22px auto;
+ background-color: aliceblue;
+ padding: 2px;
+ cursor: pointer;
+ border: 1px solid rgb(185, 185, 185);
+ border-radius: 4px;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -ms-border-radius: 4px;
+ -o-border-radius: 4px;
+}
+.google-logo img{
+  width: 70%;
+}
+.google-logo{
+    width: 20%;
+}
+.google-details{
+    width: 70%;
+}
+.google-details p{
+    margin-bottom: 0;
+}

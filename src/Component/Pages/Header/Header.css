@@ -65,6 +65,9 @@ margin-right: 110px;
 .signup-button{
     background-color: #FF9C1A;
     color: black;
+    padding: 4px 12px;
+    margin-left: 10px;
+    margin-right: 9px;
 }
 .signup-button:hover{
     background-color: #FF9C1A;
@@ -72,4 +75,25 @@ margin-right: 110px;
 }
 .d{
     text-decoration: none;
+}
+.login-button{
+ border: 1px solid #FF9C1A;
+ padding: 4px 12px;
+
+}
+.login-button:hover{
+ border: 1px solid #FF9C1A;
+ background-color: #FF9C1A;
+ padding: 4px 12px;
+ color: white;
+}
+.logout-button{
+     border: 1px solid #FF9C1A;
+     padding: 4px 12px;
+     border-radius: 4px;
+     background-color: transparent;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -ms-border-radius: 4px;
+     -o-border-radius: 4px;
 }

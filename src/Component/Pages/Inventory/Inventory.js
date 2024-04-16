@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./Inventory.css";
 import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const Inventory = () => {
   const [item, setItem] = useState({});
   const [numbers, setNumber] = useState("");
@@ -31,6 +33,9 @@ const Inventory = () => {
   const handleDelivery = () => {
     if (quantity > 0) {
       const newQuantity = quantity - 1;
+      if(newQuantity){
+        toast("Successfully delivered")
+      }
       setItem((preQuantity) => ({ ...preQuantity, quantity: newQuantity }));
       const url = `http://localhost:5000/inventory/${id}`;
       fetch(url, {
@@ -50,6 +55,9 @@ const Inventory = () => {
   //Re-Stock
   const handleStockButton = () => {
     const newQuantity = quantity + parseInt(numbers);
+    if(newQuantity){
+      toast("Stock update successfully")
+    }
     setItem((previousQuantity) => ({
       ...previousQuantity,
       quantity: newQuantity,
@@ -118,6 +126,7 @@ const Inventory = () => {
       <div className="manage-inv mt-3">
             <Link to="/manage-inventory"><button>Manage Inventories</button></Link>
       </div>
+      <ToastContainer />
     </div>
   );
 };
