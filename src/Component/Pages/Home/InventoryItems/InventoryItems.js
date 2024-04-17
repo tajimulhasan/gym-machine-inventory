@@ -16,7 +16,7 @@ const InventoryItems = () => {
             <div className='d-flex justify-content-center align-items-center mt-4'>
             <div className="items">
                 {
-                    items.map(i => <Item key={i._id} id={i._id} items={i}></Item>)
+                    items.slice(0, 6).map(i => <Item key={i._id} id={i._id} items={i}></Item>)
                 }
             </div>
             

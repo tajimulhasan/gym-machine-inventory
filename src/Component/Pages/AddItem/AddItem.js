@@ -1,36 +1,65 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './AddItem.css';
 import { Button, Form } from 'react-bootstrap';
 const AddItem = () => {
+  const handleRefName =  useRef('');
+  const handleRefName2 =  useRef('');
+  const handleRefPrice =  useRef('');
+  const handleRefQuantity =  useRef('');
+  const handleRefImg =  useRef('');
+  const handleRefDes =  useRef('');  
+  const handleFormSub = e =>{
+    e.preventDefault();
+     const name = handleRefName.current.vlaue;
+     const supplierName = handleRefName2.current.value;
+     const picture = handleRefImg.current.value;
+     const shortDescription = handleRefDes.current.value;
+     const price = Number(handleRefPrice.current.value);
+    const quantity = Number(handleRefQuantity.current.value);
+    const data = {name, picture, shortDescription, price, quantity, supplierName};
+    const url = 'http://localhost:5000/inventory';
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data)
+      e.target.reset();
+    })
+  }
     return (
         <div className='add-item-form'>
-           <Form>
+           <Form onSubmit={handleFormSub}>
             <h1 className='text-center mb-4'>Add new item</h1>
       <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
         <Form.Label>Product name: </Form.Label>
-        <Form.Control type="text" placeholder="Product name" />
+        <Form.Control ref={handleRefName} type="text" placeholder="Product name" required/>
       </Form.Group>
       <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
         <Form.Label>Producer name: </Form.Label>
-        <Form.Control type="text" placeholder="Producer name" />
+        <Form.Control ref={handleRefName2} type="text" placeholder="Producer name" required/>
       </Form.Group>
       <div className="price-and-quantity">
       <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
         <Form.Label>Price: </Form.Label>
-        <Form.Control className='pq' type="text" placeholder="Price" />
+        <Form.Control ref={handleRefPrice} className='pq' type="number" placeholder="Price" required/>
       </Form.Group>
       <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
         <Form.Label>Quantity: </Form.Label>
-        <Form.Control className='pq' type="text" placeholder="Quantity" />
+        <Form.Control ref={handleRefQuantity} className='pq' type="number" placeholder="Quantity" required/>
       </Form.Group>
       </div>
       <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Image URL: </Form.Label>
-        <Form.Control as="textarea" placeholder='paste here' rows={1} />
+        <Form.Control ref={handleRefImg} as="textarea" placeholder='paste here' rows={1} required/>
       </Form.Group>
       <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Description: </Form.Label>
-        <Form.Control as="textarea" rows={2} />
+        <Form.Control ref={handleRefDes} as="textarea" rows={2} required/>
       </Form.Group>
       <Button className='form-submit mt-3' type="submit">
         Add new Item
