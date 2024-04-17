@@ -1,6 +1,10 @@
 import React, { useRef } from 'react';
 import './AddItem.css';
 import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const AddItem = () => {
   const handleRefName =  useRef('');
   const handleRefName2 =  useRef('');
@@ -8,6 +12,8 @@ const AddItem = () => {
   const handleRefQuantity =  useRef('');
   const handleRefImg =  useRef('');
   const handleRefDes =  useRef('');  
+
+
   const handleFormSub = e =>{
     e.preventDefault();
      const name = handleRefName.current.vlaue;
@@ -29,6 +35,7 @@ const AddItem = () => {
     .then(data =>{
       console.log(data)
       e.target.reset();
+      toast('Added successfully')
     })
   }
     return (
@@ -65,6 +72,7 @@ const AddItem = () => {
         Add new Item
       </Button>
     </Form>
+    <ToastContainer />
         </div>
     );
 };
