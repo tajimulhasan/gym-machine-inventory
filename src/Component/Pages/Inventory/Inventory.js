@@ -16,6 +16,7 @@ const Inventory = () => {
     shortDescription,
     supplierName,
   } = item;
+  console.log(item);
   const { id } = useParams();
   const inputRef = useRef(null);
   useEffect(() => {

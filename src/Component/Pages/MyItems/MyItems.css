@@ -1,0 +1,14 @@
+.my-Items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0.2rem auto;
+    width: 50%;
+}
+.message{
+    margin: 0px 0px;
+    text-align: center;
+    font-size: 33px;
+    color: rgb(187, 187, 187);
+}

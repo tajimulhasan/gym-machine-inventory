@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import './AddItem.css';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const AddItem = () => {
   const handleRefName =  useRef('');
@@ -12,17 +13,18 @@ const AddItem = () => {
   const handleRefQuantity =  useRef('');
   const handleRefImg =  useRef('');
   const handleRefDes =  useRef('');  
-
-
+  const [user] = useAuthState(auth);
+        console.log(user.email);
+        const email = user.email;
   const handleFormSub = e =>{
     e.preventDefault();
-     const name = handleRefName.current.vlaue;
+     const name = handleRefName.current.value;
      const supplierName = handleRefName2.current.value;
      const picture = handleRefImg.current.value;
      const shortDescription = handleRefDes.current.value;
      const price = Number(handleRefPrice.current.value);
     const quantity = Number(handleRefQuantity.current.value);
-    const data = {name, picture, shortDescription, price, quantity, supplierName};
+    const data = {name, email, picture, shortDescription, price, quantity, supplierName};
     const url = 'http://localhost:5000/inventory';
     fetch(url, {
       method: "POST",

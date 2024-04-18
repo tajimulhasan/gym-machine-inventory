@@ -12,7 +12,7 @@ const SignUp = () => {
     loading,
     error1,
   ] = useCreateUserWithEmailAndPassword(auth);
-  const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, loading2, error2] = useSignInWithGoogle(auth);
   const [updateProfile] = useUpdateProfile(auth);
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState('');
