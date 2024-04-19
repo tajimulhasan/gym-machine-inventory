@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     padding: 22px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -27,12 +27,35 @@
 }
 .line{
     width: 2px;
-height: 240px;
+height: 200px;
 background-color: rgb(221, 221, 221);
-
+margin: 0px auto;
 }
+.devider{
+    position: relative;
+    width: 15px;
+    height: 220;
+}
+.circle{
+    position: absolute;
+    right: 0px;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 33px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+}
+#orange-circle{
+      background-color: #FF9C1A;
+ }
 .item-details{
   width: 50%;
+}
+.item-details p{
+    margin-bottom: 10px;
 }
 .deliverdAndReStock{
     width: 100%;
@@ -48,4 +71,7 @@ background-color: rgb(221, 221, 221);
 .stock-number{
     width: 80px;
     height: 35px;
+}
+.supplier-Name{
+    font-weight: 800;
 }

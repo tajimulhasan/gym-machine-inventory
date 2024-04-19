@@ -91,14 +91,18 @@ const Inventory = () => {
         <div className="item-images">
           <img src={picture} alt="" />
         </div>
+        <div className="devider">
+        <div className="circle"></div>
         <div className="line"></div>
+        <div className="circle" id="orange-circle"></div>
+        </div>
         <div className="item-details">
           <h3>{name}</h3>
           <p>
             Quantity: <span className="fw-bold">{quantity}</span>
           </p>
           <p>Price: ${price} (per)</p>
-          <p>Supplier name: {supplierName}</p>
+          <p>Supplier name: <span  className="supplier-Name">{supplierName}</span></p>
           <p>Description: {shortDescription}</p>
           <div className="deliverdAndReStock">
             <button onClick={handleDelivery} className="btn btn-success dele">

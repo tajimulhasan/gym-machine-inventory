@@ -13,8 +13,9 @@ const Item = ({items}) => {
             <img src={picture} alt="" />
             </div>
             <div className="details">
-            <h2>{name}</h2>
-             <p style={{fontSize: '18px'}}>Supplier Name: <span className='fw-bold'>{supplierName}</span></p>
+            <h3 className='mt-2'>{name}</h3>
+               <p >{shortDescription.slice(0, 75)}...</p>
+             <p style={{fontSize: '17px'}}>Supplier Name: <span className='fw-bold' style={{color: 'black'}}>{supplierName}</span></p>
              <p>Price: ${price}</p>
              <p>Quantity: {quantity}</p>
             </div>

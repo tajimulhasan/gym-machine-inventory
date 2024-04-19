@@ -2,14 +2,16 @@
     z-index: 0;
 }
 .manage-inv{
+     
      height: 50px;
      text-align: center;
 }
 .manage-inv button{
      background-image: linear-gradient(to left, rgb(255, 188, 64), orange);
-     padding: 6px 16px;
+     padding: 4px 16px;
      border: none;
-     font-size: 18px;
+     color: white;
+     font-size: 17px;
      border-radius:6px;
      -webkit-border-radius:6px;
      -moz-border-radius:6px;
@@ -17,8 +19,7 @@
      -o-border-radius:6px;
 }
 .manage-inv button:hover{
-     border: 2px solid orange;
      background-image: linear-gradient(to left, rgb(255, 188, 64), orange);
-      font-size: 19px;
-      color: white;
+      font-size: 17px;
+      color: black;
 }

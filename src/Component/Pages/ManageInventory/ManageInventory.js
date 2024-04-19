@@ -31,13 +31,14 @@ const ManageInventory = () => {
    }
   }
   return (
-    <div>
+    <div><br />
+        <h1 className="text-center">Manage Items</h1>
       <div className="manage-card">
         {items.map((i) => (
           <Manage key={i._id} item={i} handleDelete={handleDelete}></Manage>
         ))}
       </div>
-      <div className="manage-inv mt-3">
+      <div className="manage-inv mt-4">
             <Link to="/addItem"><button>Add Item</button></Link>
       </div>
       <ToastContainer />

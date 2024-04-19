@@ -68,7 +68,7 @@ const AddItem = () => {
       </Form.Group>
       <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Description: </Form.Label>
-        <Form.Control ref={handleRefDes} as="textarea" rows={2} required/>
+        <Form.Control placeholder='Describe about your product...' ref={handleRefDes} as="textarea" rows={2} required/>
       </Form.Group>
       <Button className='form-submit mt-3' type="submit">
         Add new Item
