@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import google2 from '../../../Images/google.png';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
   const [
     signInWithEmailAndPassword,
@@ -11,6 +13,11 @@ const Login = () => {
     loading,
     error1,
   ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending3, error3] = useSendPasswordResetEmail(
+    auth
+  );
+
+
   const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   const location = useLocation();
@@ -21,13 +28,22 @@ const Login = () => {
     console.log(user);
     navigate(from, {replace: true})
   }
-  const handleLoginSubmit = e =>{
+  const handleLoginSubmit = async(e) =>{
     e.preventDefault();
     const email = handleEmailRef.current.value;
     const password = handlePassRef.current.value;
-  signInWithEmailAndPassword(email, password);
+  await signInWithEmailAndPassword(email, password);
  }
-
+const handleReset = async() =>{
+  const email = handleEmailRef.current.value;
+  if(email){
+    await sendPasswordResetEmail(email);  
+    toast('Sent email')
+  }
+  else{
+    toast('Pelease enter your email')
+  }
+}
     return (
         <div>
          
@@ -43,9 +59,7 @@ const Login = () => {
         </Form.Group>
         <p className="text-danger mb-2" style={{fontSize: '14px'}}>{error1?.message}</p>
         <p className="text-danger mb-2" style={{fontSize: '14px'}}>{error2?.message}</p>
-        <Form.Group className="mb-2" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        <p onClick={handleReset} className='text-primary mb-2' style={{cursor: 'pointer'}}>Forgot password?</p>
         <p className="mb-0 mt-2">Create account? <Link to='/signup'>Sign up</Link></p>
         <Button className="form-submit mt-3" type="submit">
           Login
@@ -65,6 +79,7 @@ const Login = () => {
           <p>Continue with Google</p>
         </div>
       </div>
+      <ToastContainer />
         </div>
     );
 };

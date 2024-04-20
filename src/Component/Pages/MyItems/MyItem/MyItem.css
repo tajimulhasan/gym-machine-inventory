@@ -18,13 +18,13 @@
 margin: 2px 0px;
 }
 .mI-dlt{
-    background-color: #FF9C1A;
+    background-color: #d11a2a;
     color: white;
     padding: 0.2rem 1rem;
     margin-top: 12px;
 }
 .mI-dlt:hover{
-    background-color: #f79516;
+    background-color:rgb(255, 50, 50);
     color: white;
 }
 .mi-detail{
