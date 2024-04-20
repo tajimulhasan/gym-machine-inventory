@@ -77,12 +77,12 @@ margin-right: 110px;
     text-decoration: none;
 }
 .login-button{
- border: 1px solid #FF9C1A;
+ border: 1px solid #ff9c1a;
  padding: 4px 12px;
 
 }
 .login-button:hover{
- border: 1px solid #FF9C1A;
+ border: 1px solid #ff9c1a;
  background-color: #FF9C1A;
  padding: 4px 12px;
  color: white;
