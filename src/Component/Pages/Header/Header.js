@@ -41,6 +41,7 @@ const Header = () => {
                 ''
                }
                 <CustomLink to='/blog' className="d"><li>Blog</li></CustomLink>
+                <CustomLink to='/about' className="d"><li>About</li></CustomLink>
                   {
                     user ? 
                     <button onClick={handleLogOut} className='mx-3 logout-button'>Log Out</button>

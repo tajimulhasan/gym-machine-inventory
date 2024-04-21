@@ -12,6 +12,7 @@ import ManageInventory from "./Component/Pages/ManageInventory/ManageInventory";
 import AddItem from "./Component/Pages/AddItem/AddItem";
 import RequireAuth from "./Component/RequireAuth/RequireAuth";
 import MyItems from "./Component/Pages/MyItems/MyItems";
+import About from "./Component/Pages/About/About";
 
 function App() {
   return (
@@ -53,10 +54,12 @@ function App() {
           }
         ></Route>
         <Route path="/blog" element={<Blogs></Blogs>}></Route>
+        <Route path="/About" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <br /><br />
       <Footer></Footer>
     </div>
   );

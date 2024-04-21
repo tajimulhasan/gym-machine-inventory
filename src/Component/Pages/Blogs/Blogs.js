@@ -57,8 +57,8 @@ const Blogs = () => {
           <h3>4. What is the purpose of jwt and how does it work?</h3>
           <h5>(A) The purpose of jwt:</h5>
           <p>
-            JSON Web Tokens (JWTs) a re a standardized way to securely send data
-            between two parties.
+            JSON Web Tokens (JWTs) are a standardized way to securely send data
+            between two parties. JWT is a mechanism for verifying the authenticity of some JSON data.
           </p>
           <h5>(B) How does it works: </h5>
           <p>

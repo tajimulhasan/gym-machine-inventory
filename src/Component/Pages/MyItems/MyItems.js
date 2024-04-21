@@ -20,7 +20,7 @@ const MyItems = () => {
                     setmyItems(data);
                 }
             })
-         }, []);
+         }, [myItems]);
          const handleMyItem = itemId =>{
            const isConfirm = window.confirm('Are you sure you want to delete this item?');
            if(isConfirm){

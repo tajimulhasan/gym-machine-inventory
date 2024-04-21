@@ -1,0 +1,49 @@
+.footer-section{
+background-color: rgb(22, 22, 22);
+padding: 42px;
+margin-top: 2rem;
+}
+.first-section{
+display: flex;
+justify-content: space-between;
+margin: 0px auto;
+width: 85%;
+}
+.first-section img{
+    width: 130px;
+}
+.details-list{
+display: flex;
+justify-content: space-around;
+width: 40%;
+}
+.f{
+    display: flex;
+    flex-direction: column;
+}
+.f a{
+    text-decoration: none;
+    color: white;
+}
+
+.second-section{
+display: flex;
+justify-content: space-between;
+width: 85%;
+margin: 0px auto;
+}
+.copyright-msg p{
+        margin-bottom: 0px;
+        color: rgb(168, 168, 168);
+        font-size: 14px;
+
+    }
+.others{
+display: flex;
+justify-content: space-around;
+color: white;
+width: 40%;
+}
+.others p{
+    margin-bottom: 0px;
+}

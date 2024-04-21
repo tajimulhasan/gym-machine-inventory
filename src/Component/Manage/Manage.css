@@ -38,3 +38,8 @@
 .delete-but{
     cursor: pointer;
 }
+.icons{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
