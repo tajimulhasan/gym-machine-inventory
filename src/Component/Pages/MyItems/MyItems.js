@@ -43,7 +43,7 @@ const MyItems = () => {
          }
     return (
         <div><br />
-            <h3 className='text-center mb-3'>My Items</h3><br />
+            <h3 className='text-center'>My Items</h3><br />
             <p className='message'>{message}</p>
               <div className="my-Items">
               {

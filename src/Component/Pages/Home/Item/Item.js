@@ -14,14 +14,14 @@ const Item = ({items}) => {
             </div>
             <div className="details">
             <h3 className='mt-2'>{name}</h3>
-               <p >{shortDescription.slice(0, 75)}...</p>
-             <p style={{fontSize: '17px'}}>Supplier Name: <span className='fw-bold' style={{color: 'black'}}>{supplierName}</span></p>
+               <p className='sort-des'>{shortDescription.slice(0, 75)}...</p>
+             <p className='sp'>Vendor: <span className='fw-bold' style={{color: 'black'}}>{supplierName}</span></p>
              <p>Price: ${price}</p>
              <p>Quantity: {quantity}</p>
             </div>
-         <div className="up-btn">
-         <button onClick={() => handleClick(_id)} className='btn update-btn'>Stock Update</button>
-         </div>
+           <div className="up-btn">
+            <button onClick={() => handleClick(_id)} className='btn update-btn'>Stock Update</button>
+            </div>
         </div>
     );
 };

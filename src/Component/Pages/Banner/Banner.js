@@ -7,7 +7,7 @@ import { Carousel } from "react-bootstrap";
 import './Banner.css';
 const Banner = () => {
   return (
-    <Carousel data-bs-theme="light">
+    <Carousel data-bs-theme="light" className="bann"> 
       <Carousel.Item>
         <img className="d-block w-100" src={img1} alt="First slide" />
         <Carousel.Caption  className="carouselCaption">

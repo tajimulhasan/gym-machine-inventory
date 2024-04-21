@@ -1,50 +1,102 @@
-.item{
-    width: 320px;
-    height: 508px;
-    padding: 12px;
+.item {
+  width: 320px;
+  height: 508px;
+  padding: 12px;
+  position: relative;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.item-img {
+  text-align: center;
+}
+.item img {
+  width: 86%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.item p {
+  margin-bottom: 2px;
+  text-align: justify;
+  color: rgb(99, 99, 99);
+}
+.up-btn {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.update-btn {
+  background-color: #ff9c1a;
+  padding: 4px 48px;
+  color: white;
+}
+.update-btn:hover {
+  background-color: #ff9c1a;
+  color: black;
+  padding: 4px 48px;
+}
+.details {
+  text-align: center;
+}
+.sp {
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 576px) {
+  .item {
+    width: 179px;
+    height: 350px;
     position: relative;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-        border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-.item-img{
-    text-align: center;
-}
-.item img{
-   
-    width: 86%;
+  }
+  .item img {
+    width: 80%;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-}
-.item p{
+  }
+  .item p {
     margin-bottom: 2px;
+    font-size: 12px;
     text-align: justify;
     color: rgb(99, 99, 99);
-}
-.up-btn{
-position: absolute;
-top: 90%;
- width: 100%;
- display: flex;
- justify-content: center;
-}
-.update-btn{
-    background-color: #FF9C1A;
-    padding: 4px 48px; 
+  }
+  .sp {
+    font-size: 12px;
+  }
+  .up-btn {
+    position: absolute;
+    top: 89%;
+    width: 155px;
+    display: flex;
+    justify-content: center;
+  }
+  .update-btn {
+    background-color: #ff9c1a;
+    padding: 2px 12px;
     color: white;
-}
-.update-btn:hover{
-    background-color: #FF9C1A;
+    font-size: 14px;
+  }
+  .update-btn:hover {
+    background-color: #ff9c1a;
     color: black;
-    padding: 4px 48px;
+    padding: 4px 12px;
+  }
+  .details {
+    text-align: center;
+  }
+  .details h3 {
+    font-size: 19px;
+  }
+ 
 }
-.details{
- text-align: center;
-}
-

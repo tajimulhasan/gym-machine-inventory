@@ -1,0 +1,12 @@
+.about{
+ width: 60%;
+ margin: 8px auto;
+}
+.about h3{
+ text-align: center;
+ margin: 14px 14px;
+}
+.about p{
+text-align: justify;
+font-size: 18px;
+}

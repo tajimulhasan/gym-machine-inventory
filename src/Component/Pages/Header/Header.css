@@ -1,97 +1,143 @@
-.header{
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
+  z-index: 1000;
+}
+.logo {
+  margin-left: 110px;
+}
+.logo img {
+  width: 53%;
+}
+.elements {
+  margin-right: 110px;
+}
+.elements ul {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+  text-decoration: none;
+  position: relative;
+
+}
+
+.elements ul li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px 15px;
+  padding: 2px 4px;
+}
+.elements ul li:hover {
+  text-decoration: underline;
+}
+.signup-button {
+  background-color: #ff9c1a;
+  color: white;
+  padding: 4px 12px;
+  margin-left: 10px;
+  margin-right: 9px;
+}
+.signup-button:hover {
+  background-color: #ff9c1a;
+  color: black;
+}
+.d {
+  text-decoration: none;
+}
+.login-button {
+  border: 1px solid #ff9c1a;
+  padding: 4px 12px;
+}
+.login-button:hover {
+  border: 1px solid #ff9c1a;
+  background-color: #ff9c1a;
+  padding: 4px 12px;
+  color: white;
+}
+.logout-button {
+  border: 1px solid #ff9c1a;
+  padding: 4px 12px;
+  border-radius: 5px;
+  background-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#check {
+  display: none;
+}
+.checkbtn {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  nav {
     width: 100%;
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
     z-index: 1000;
-}
-nav{
-    display: flex;
-    justify-content: space-between;    
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.logo{
-    margin-left: 110px;
-}
-.logo img{
-    width: 53%;
-}
-.elements{
-margin-right: 110px;
-}
-.elements ul{
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0;
-    text-decoration: none;
-    position: relative;
-}
-
-.elements ul li {
-    text-decoration: none;
-    list-style: none;
-    margin: 0px 15px;
-    padding: 2px 4px;
+    position: fixed;
+    top: 0;
+    background-color: white;
   }
-.elements ul li:hover{
-  text-decoration: underline;
-}
-.signup-button{
-    background-color: #FF9C1A;
+  .logo {
+    margin-left: 20px;
+  }
+  .logo img {
+    width: 100px;
+  }
+   .elements ul {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+  }
+  .elements ul li {
     color: white;
-    padding: 4px 12px;
-    margin-left: 10px;
-    margin-right: 9px;
-}
-.signup-button:hover{
-    background-color: #FF9C1A;
-    color: black;
-}
-.d{
-    text-decoration: none;
-}
-.login-button{
- border: 1px solid #ff9c1a;
- padding: 4px 12px;
-
-}
-.login-button:hover{
- border: 1px solid #ff9c1a;
- background-color: #FF9C1A;
- padding: 4px 12px;
- color: white;
-}
-.logout-button{
-     border: 1px solid #FF9C1A;
-     padding: 4px 12px;
-     border-radius: 4px;
-     background-color: transparent;
-     -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-     -ms-border-radius: 4px;
-     -o-border-radius: 4px;
-}
-
-@media only screen and (max-width: 576px){
-    .header{
-        width: 100%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
-        z-index: 1000;
-    }
-    .logo{
-        margin-left: 20px;
-    }
-    .logo img{
-        width: 120px;
-    }
-    .elements{
-        margin-right: 100px;
-        }
+    text-align: center;
+  }
+  #check {
+    display: none;
+  }
+  .checkbtn {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #check:checked ~ .elements ul {
+    left: 0;
+  }
+  .d{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 22px 0px;
+  }
+  .login-button{
+    color: white;
+    background-color: #ff9c1a;
+  }
+  .logout-button{
+    color: white;
+    background-color: #ff9c1a;
+    text-align: center;
+  }
 }

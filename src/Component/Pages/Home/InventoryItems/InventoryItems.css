@@ -6,3 +6,10 @@
 .items-sec{
     margin: 0px 50px;
 }
+@media only screen and (max-width: 576px) {
+    .items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

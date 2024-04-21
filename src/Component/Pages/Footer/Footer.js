@@ -1,12 +1,13 @@
 import React from "react";
 import "./Footer.css";
 import whiteLogo from "../../Images/INVENTORY-white.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer-section">
       <div className="first-section">
         <div className="white-logo">
-          <img src={whiteLogo} alt="" />
+          <Link to="/"><img src={whiteLogo} alt="" /></Link>
         </div>
         <div className="details-list">
           <div className="f">
