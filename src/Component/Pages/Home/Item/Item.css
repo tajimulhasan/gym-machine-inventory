@@ -1,6 +1,6 @@
 .item {
-  width: 320px;
-  height: 508px;
+  width: 310px;
+  height: 484px;
   padding: 12px;
   position: relative;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
@@ -15,7 +15,7 @@
   text-align: center;
 }
 .item img {
-  width: 86%;
+  width: 80%;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;

@@ -50,6 +50,7 @@ const MyItems = () => {
                 myItems.map(mi => <MyItem key={mi._id} myItem={mi} handleMyItem={handleMyItem}></MyItem>)
               }
               </div>
+              <br /><br />
         </div>
     );
 };

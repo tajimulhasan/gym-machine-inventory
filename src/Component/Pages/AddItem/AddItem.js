@@ -64,7 +64,7 @@ const AddItem = () => {
       </div>
       <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Image URL: </Form.Label>
-        <p className='tips'>*Note: Your image size will be 600x600 pixels.</p>
+        <p className='tips'>*Note: Your image size should be 600x600 pixels.</p>
         <Form.Control ref={handleRefImg} as="textarea" placeholder='paste here' rows={1} required/>
       </Form.Group>
       <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">

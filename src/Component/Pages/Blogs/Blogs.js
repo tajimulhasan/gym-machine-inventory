@@ -62,8 +62,7 @@ const Blogs = () => {
           </p>
           <h5>(B) How does it works: </h5>
           <p>
-            JSON Web Tokens (JWTs) are a standardized way to securely send data
-            between two parties.
+          The JWT is then sent with every API request as a bearer token in the authorization header. Identifies the client, limits API usage.
           </p>
         </div>
       </div>
