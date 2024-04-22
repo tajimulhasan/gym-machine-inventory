@@ -1,6 +1,6 @@
 .sign-form{
     width: 24%;
-    margin: 0px auto;
+    margin: auto auto;
     padding: 0.8rem 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 7px;
@@ -53,4 +53,11 @@
 }
 .google-details p{
     margin-bottom: 0;
+}
+@media only screen and (max-width: 576px) {
+    .sign-form{
+        width: 70%;
+        margin-top: 98px;
+        padding: 0.8rem 1rem;
+    }
 }

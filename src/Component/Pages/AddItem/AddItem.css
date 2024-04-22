@@ -28,3 +28,18 @@
     background-color: #FF9C1A;
     color: black;
 }
+.tips{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 576px){
+    .add-item-form{
+        width: 75%;
+        margin: 100px auto;
+    }
+    .pq{ 
+        width: 95%;
+    }
+}

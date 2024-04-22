@@ -1,49 +1,93 @@
-.footer-section{
-background-color: rgb(22, 22, 22);
-padding: 42px;
-margin-top: 2rem;
+.footer-section {
+  background-color: rgb(22, 22, 22);
+  padding: 42px;
+  margin-top: 2rem;
 }
-.first-section{
-display: flex;
-justify-content: space-between;
-margin: 0px auto;
-width: 85%;
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  width: 85%;
 }
-.first-section img{
-    width: 130px;
+.first-section img {
+  width: 130px;
 }
-.details-list{
-display: flex;
-justify-content: space-around;
-width: 40%;
+.details-list {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
-.f{
+.f {
+  display: flex;
+  flex-direction: column;
+}
+.f a {
+  text-decoration: none;
+  color: white;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0px auto;
+}
+.copyright-msg p {
+  margin-bottom: 0px;
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+}
+.others {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  width: 40%;
+}
+.others p {
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-section {
+    background-color: rgb(22, 22, 22);
+    padding: 24px 11px;
+    margin-top: 2rem;
+  }
+  .first-section {
     display: flex;
-    flex-direction: column;
-}
-.f a{
-    text-decoration: none;
-    color: white;
-}
-
-.second-section{
-display: flex;
-justify-content: space-between;
-width: 85%;
-margin: 0px auto;
-}
-.copyright-msg p{
-        margin-bottom: 0px;
-        color: rgb(168, 168, 168);
-        font-size: 14px;
-
-    }
-.others{
-display: flex;
-justify-content: space-around;
-color: white;
-width: 40%;
-}
-.others p{
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 95%;
+  }
+  .first-section img {
+    width: 110px;
+  }
+  .details-list {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+  .second-section {
+    width: 95%;
+    margin: 0px auto;
+  }
+  .copyright-msg{
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .copyright-msg p {
     margin-bottom: 0px;
+    color: rgb(168, 168, 168);
+    font-size: 12px;
+}
+
+  .others {
+    color: white;
+    width: 40%;
+    display: none;
+  }
+  .others p {
+    margin-bottom: 0px;
+  }
 }

@@ -30,3 +30,8 @@ margin: 2px 0px;
 .mi-detail{
     text-align: center;
 }
+@media only screen and (max-width: 575px){
+    .myItem-card{
+        width: 100%;
+    }
+}

@@ -2,3 +2,13 @@
  width: max-content;
  margin: 20px auto;
 }
+
+@media only screen and (max-width: 576px){
+    .manage-card{
+        width: 100%;
+        margin: 12px auto;
+       }
+       .manage-parent{
+              margin-top: 52px;
+       }
+}

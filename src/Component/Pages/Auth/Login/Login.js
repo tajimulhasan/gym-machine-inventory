@@ -45,9 +45,8 @@ const handleReset = async() =>{
   }
 }
     return (
-        <div>
-         
-           <Form onSubmit={handleLoginSubmit} className="sign-form mt-4">
+        <div><br /><br />
+           <Form onSubmit={handleLoginSubmit} className="sign-form ">
            <h1 className='text-center m-2'>Login</h1>
         <Form.Group className="mb-2" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

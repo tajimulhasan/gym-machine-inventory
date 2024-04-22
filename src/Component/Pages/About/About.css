@@ -10,3 +10,10 @@
 text-align: justify;
 font-size: 18px;
 }
+
+@media only screen and (max-width: 576px) {
+    .about{
+        width: 70%;
+      margin-top: 61px;
+    }
+}

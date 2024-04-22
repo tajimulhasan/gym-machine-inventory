@@ -31,7 +31,7 @@ const ManageInventory = () => {
    }
   }
   return (
-    <div><br />
+    <div className="manage-parent"><br />
         <h1 className="text-center">Manage Items</h1>
       <div className="manage-card">
         {items.map((i) => (

@@ -11,7 +11,7 @@ const Banner = () => {
       <Carousel.Item>
         <img className="d-block w-100" src={img1} alt="First slide" />
         <Carousel.Caption  className="carouselCaption">
-          <h3>Find your better lifestyle.</h3>
+          <h3> <span style={{color: '#ff9c1a'}}>Find</span> your better lifestyle.</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

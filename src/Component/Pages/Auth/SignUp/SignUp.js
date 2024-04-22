@@ -49,8 +49,8 @@ const SignUp = () => {
   };
 
   return (
-    <>
-      <Form onSubmit={handleSubmit} className="sign-form mt-4">
+    <><br /><br />
+      <Form onSubmit={handleSubmit} className="sign-form">
         <h2 className="text-center">SignUp</h2>
         <Form.Group className="mb-2" controlId="formBasicEmail">
           <Form.Label>Your name</Form.Label>

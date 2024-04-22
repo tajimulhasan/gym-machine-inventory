@@ -3,7 +3,10 @@
     color: white;
     margin-bottom: 30px;
     animation: textIn .5s ease;
-    -webkit-animation: textIn .5s ease;
+    -webkit-animation: textIn .9s ease;
+}
+.bann{
+    margin-top: 3px;
 }
 @keyframes textIn{
     0%{
@@ -28,11 +31,11 @@
 
 @media only screen and (max-width: 576px){
     .carouselCaption h3{
-        font-size: 26px;
+        font-size: 28px;
         color: white;
         margin-bottom: 10px;
-        animation: textIn .5s ease;
-        -webkit-animation: textIn .5s ease;
+        animation: textIn .9s ease;
+        -webkit-animation: textIn .9s ease;
 }
 .bann{
     margin-top: 51px;
