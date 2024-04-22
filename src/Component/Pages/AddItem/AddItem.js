@@ -14,7 +14,6 @@ const AddItem = () => {
   const handleRefImg =  useRef('');
   const handleRefDes =  useRef('');  
   const [user] = useAuthState(auth);
-        console.log(user.email);
         const email = user.email;
   const handleFormSub = e =>{
     e.preventDefault();
@@ -25,7 +24,7 @@ const AddItem = () => {
      const price = Number(handleRefPrice.current.value);
     const quantity = Number(handleRefQuantity.current.value);
     const data = {name, email, picture, shortDescription, price, quantity, supplierName};
-    const url = 'http://localhost:5000/inventory';
+    const url = 'https://gym-machine-inventory-management-server.onrender.com/inventory';
     fetch(url, {
       method: "POST",
       headers: {

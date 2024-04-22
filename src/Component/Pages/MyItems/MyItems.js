@@ -10,7 +10,7 @@ const MyItems = () => {
          const [user] = useAuthState(auth);
          const email = user.email;
          useEffect(() =>{
-            fetch(`http://localhost:5000/inventory/email/${email}`)
+            fetch(`https://gym-machine-inventory-management-server.onrender.com/inventory/email/${email}`)
             .then(res => res.json())
             .then(data => {
                 if(data.length === 0){
@@ -24,7 +24,7 @@ const MyItems = () => {
          const handleMyItem = itemId =>{
            const isConfirm = window.confirm('Are you sure you want to delete this item?');
            if(isConfirm){
-            const url = `http://localhost:5000/inventory/${itemId}`;
+            const url = `https://gym-machine-inventory-management-server.onrender.com/inventory/${itemId}`;
             fetch(url, {
                 method: "DELETE",
             })

@@ -3,7 +3,6 @@ import "./Manage.css";
 import { Link} from "react-router-dom";
 const Manage = ({ item, handleDelete }) => {
   const {_id, name, supplierName, shortDescription, quantity, picture } = item;
-   console.log(item);
   return (
     <div className="card-parent">
       <div className="card-img">

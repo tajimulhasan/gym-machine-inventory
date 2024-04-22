@@ -7,15 +7,14 @@ import 'react-toastify/dist/ReactToastify.css';
 const ManageInventory = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/inventory")
+    fetch("https://gym-machine-inventory-management-server.onrender.com/inventory")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
-  console.log(items);
   const handleDelete = itemId =>{
     const confirm = window.confirm('Are you sure you want to delete this item?');
    if(confirm){
-    const url =`http://localhost:5000/inventory/${itemId}`;
+    const url =`https://gym-machine-inventory-management-server.onrender.com/inventory/${itemId}`;
     fetch(url, {
       method: "DELETE",
     })

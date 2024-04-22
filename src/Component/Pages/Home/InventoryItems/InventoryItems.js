@@ -4,7 +4,7 @@ import './InventoryItems.css';
 const InventoryItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/inventory')
+        fetch('https://gym-machine-inventory-management-server.onrender.com/inventory')
         .then(res => res.json())
         .then(data => {
             setItems(data);

@@ -20,7 +20,7 @@ const Inventory = () => {
   const { id } = useParams();
   const inputRef = useRef(null);
   useEffect(() => {
-    fetch(`http://localhost:5000/inventory/${id}`)
+    fetch(`https://gym-machine-inventory-management-server.onrender.com/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -38,7 +38,7 @@ const Inventory = () => {
         toast("Successfully delivered")
       }
       setItem((preQuantity) => ({ ...preQuantity, quantity: newQuantity }));
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://gym-machine-inventory-management-server.onrender.com/inventory/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {
@@ -63,7 +63,7 @@ const Inventory = () => {
       ...previousQuantity,
       quantity: newQuantity,
     }));
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://gym-machine-inventory-management-server.onrender.com/inventory/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
